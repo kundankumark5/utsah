@@ -1,0 +1,48 @@
+<div class="headerBg">
+  <div class="logo"><img src="../../assets/images/logo.webp" alt="" /></div>
+  <div class="p-input-icon-right">
+    <mat-form-field appearance="fill">
+      <input
+        matInput
+        type="text"
+        matInput
+        placeholder="Search News and Jobs here"
+      />
+      <span> <mat-icon matSuffix>settings_voice</mat-icon></span>
+
+      <i
+        class="fa-solid fa-magnifying-glass search-icon"
+        (click)="clearSearch()"
+      ></i>
+    </mat-form-field>
+  </div>
+  <div class="change">change this background</div>
+</div>
+<div class="toolbar">
+  <mat-toolbar>
+    <div class="navs left">
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <button mat-icon-button>
+        <div class="tabIcon">
+          <img src="../../assets/images/logo2.jpg" alt="" />
+        </div>
+      </button>
+    </div>
+    <span class="example-spacer"></span>
+    <div class="navs right">
+      <button mat-icon-button>Home</button>
+      <button mat-icon-button>News</button>
+      <button mat-icon-button>Entertainment</button>
+      <button mat-icon-button>Government Policy</button>
+      <button mat-icon-button>Jobs</button>
+      <button mat-icon-button>Sports</button>
+    </div>
+  </mat-toolbar>
+</div>
