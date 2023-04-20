@@ -1,21 +1,34 @@
 .topNews {
   width: 94%;
-  display: flex;
   margin: 0 auto;
+  display: flex;
   justify-content: space-between;
   &-left {
     width: 65%;
 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-
     .cards {
       width: 100%;
+      height: 300px;
       display: flex;
       justify-content: space-between;
+      margin-bottom: 15px;
       .topLeft {
         width: 65%;
+        .slick {
+          width: 100%;
+          height: 300px;
+          position: relative;
+          &-img {
+          }
+          p {
+            position: absolute;
+            padding: 0 5px;
+            bottom: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+          }
+        }
       }
       .topRight {
         width: 32%;
@@ -30,9 +43,12 @@
   }
   &-right {
     width: 30%;
+    .tabs {
+      height: 100%;
+    }
     .news {
       display: flex;
-      margin: 10px 0;
+      margin: 15px 0;
     }
   }
 }
@@ -51,4 +67,154 @@
     bottom: 0;
     padding: 0 5px;
   }
+}
+
+:host::ng-deep {
+  .slick-dotted.slick-slider {
+    .newsBg {
+      height: 300px;
+    }
+    .slick-dots li button:before {
+      color: #fff;
+      opacity: 1;
+    }
+  }
+  .mat-tab-group {
+    height: 100%;
+  }
+}
+
+.videoCrousel {
+  .slick {
+    width: 8% !important;
+  }
+  .slick-initialized .slick-slide {
+    display: flex;
+  }
+}
+
+.blogs {
+  width: 94%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  &-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    .title {
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    .more {
+      border: 1px solid rgb(247, 104, 52);
+      border-radius: 25px;
+      padding: 2px 5px;
+      background-color: transparent;
+      color: rgb(247, 104, 52);
+      cursor: pointer;
+    }
+
+    .newsCards {
+      width: 23%;
+      height: 300px;
+      position: relative;
+      background-color: rgb(250, 219, 82);
+      border-radius: 5px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px 5px 0 0;
+      }
+      p,
+      span {
+        position: absolute;
+        padding: 0 5px;
+        bottom: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        z-index: 2;
+      }
+      .whiteTxt {
+        color: #fff;
+      }
+      span {
+        right: 5px;
+        bottom: 5px;
+        font-size: 12px;
+        z-index: 2;
+      }
+      .blogImg {
+        height: 70%;
+      }
+    }
+  }
+}
+.titleColor {
+  color: rgb(247, 104, 52);
+}
+
+.corner {
+  width: 94%;
+  margin: 0 auto;
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(247, 104, 52);
+    padding-top: 30px;
+    .ads {
+      width: 20%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .colWrapper {
+      width: 36%;
+      .section {
+        display: flex;
+        margin: 10px 0;
+        padding: 5px 0;
+        .image {
+          width: 20%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .about {
+          padding: 0 10px;
+          &-head {
+          }
+          &-subHead {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+    .col4 {
+      width: 23%;
+    }
+  }
+  .videoWrapper {
+    background-color: rgb(247, 104, 52);
+    margin-top: 30px;
+    padding: 20px 10px;
+    .videos {
+      display: flex;
+      justify-content: space-between;
+      .video{
+        width: 25%;
+        height: 200px;
+      }
+    }
+  }
+}
+.borderBtm {
+  border-bottom: 1px solid !important;
 }

@@ -13,7 +13,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { NgxSlickJsModule } from 'ngx-slickjs';
+import { NgImageSliderModule } from 'ng-image-video-gallery';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatFormFieldModule,
     MatTabsModule,
     MatInputModule,
+    NgxSlickJsModule.forRoot(),
     BrowserAnimationsModule,
+    NgImageSliderModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

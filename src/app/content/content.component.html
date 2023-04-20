@@ -1,21 +1,41 @@
 <div class="topNews">
   <div class="topNews-left">
     <div class="cards">
-      <div class="topLeft">
-        <div class="newsBg">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla
-            error excepturi fugiat, nisi eum possimus aliquam, accusamus,
-            dignissimos accusantium dolorem numquam totam.
-          </p>
-        </div>
+      <div
+        class="topLeft"
+        slickContainer
+        #slickController="slick"
+        [slickConfig]="config"
+      >
+        <ng-container *ngIf="slickController.initialize">
+          <div class="slick" slickItem>
+            <img class="slick-img" src="../../assets/images/silk1.jpg" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+              totam.
+            </p>
+          </div>
+          <div class="slick" slickItem>
+            <img class="slick-img" src="../../assets/images/silk2.jpg" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+              totam.
+            </p>
+          </div>
+          <div class="slick" slickItem>
+            <img class="slick-img" src="../../assets/images/silk3.jpg" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+              totam.
+            </p>
+          </div>
+        </ng-container>
       </div>
       <div class="topRight">
         <div class="newsBg">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla
-            error excepturi fugiat, nisi eum possimus aliquam, accusamus,
-            dignissimos accusantium dolorem numquam totam.
+            error excepturi fugiat, nisi eum possimus aliquam
           </p>
         </div>
       </div>
@@ -25,8 +45,7 @@
         <div class="newsBg">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla
-            error excepturi fugiat, nisi eum possimus aliquam, accusamus,
-            dignissimos accusantium dolorem numquam totam.
+            error excepturi fugiat, nisi eum possimus aliquam
           </p>
         </div>
       </div>
@@ -34,8 +53,7 @@
         <div class="newsBg">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla
-            error excepturi fugiat, nisi eum possimus aliquam, accusamus,
-            dignissimos accusantium dolorem numquam totam.
+            error excepturi fugiat, nisi eum possimus aliquam
           </p>
         </div>
       </div>
@@ -44,14 +62,13 @@
       <div class="newsBg">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla
-          error excepturi fugiat, nisi eum possimus aliquam, accusamus,
-          dignissimos accusantium dolorem numquam totam.
+          error excepturi fugiat, nisi eum possimus aliquam,
         </p>
       </div>
     </div>
   </div>
   <div class="topNews-right">
-    <div>
+    <div class="tabs">
       <mat-tab-group>
         <mat-tab label="First">
           <div>
@@ -75,6 +92,163 @@
           </div>
         </mat-tab>
       </mat-tab-group>
+    </div>
+  </div>
+</div>
+
+<div class="blogs">
+  <div class="blogs-head">
+    <div class="title titleColor">News</div>
+    <div><button class="more">More</button></div>
+  </div>
+  <div class="blogs-head">
+    <div class="newsCards">
+      <img src="../../assets/images/silk1.jpg" alt="" />
+      <p class="whiteTxt">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla
+      </p>
+      <span class="whiteTxt">39 sec ago</span>
+    </div>
+    <div class="newsCards">
+      <img src="../../assets/images/silk2.jpg" alt="" />
+      <p class="whiteTxt">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla
+      </p>
+      <span class="whiteTxt">39 sec ago</span>
+    </div>
+    <div class="newsCards">
+      <img src="../../assets/images/silk3.jpg" alt="" />
+      <p class="whiteTxt">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla
+      </p>
+      <span class="whiteTxt">39 sec ago</span>
+    </div>
+    <div class="newsCards">
+      <img src="../../assets/images/silk4.jpg" alt="" />
+      <p class="whiteTxt">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla
+      </p>
+      <span class="whiteTxt">39 sec ago</span>
+    </div>
+  </div>
+</div>
+<div class="corner">
+  <div class="corner-content">
+    <div class="colWrapper col4">
+      <div *ngFor="let item of imageObject" class="section borderBtm">
+        <div class="about borderBtm">
+          <div class="about-head">{{ item.head }}</div>
+          <div class="about-subHead">{{ item.subHead }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="colWrapper col4">
+      <div *ngFor="let item of imageObject" class="section borderBtm">
+        <div class="about borderBtm">
+          <div class="about-head">{{ item.head }}</div>
+          <div class="about-subHead">{{ item.subHead }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="colWrapper col4">
+      <div *ngFor="let item of imageObject" class="section borderBtm">
+        <div class="about borderBtm">
+          <div class="about-head">{{ item.head }}</div>
+          <div class="about-subHead">{{ item.subHead }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="colWrapper col4">
+      <div *ngFor="let item of imageObject" class="section borderBtm">
+        <div class="about borderBtm">
+          <div class="about-head">{{ item.head }}</div>
+          <div class="about-subHead">{{ item.subHead }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="corner">
+  <div class="videoWrapper">
+    <div style="color: #fff">Videos</div>
+    <div class="videos">
+      <iframe
+        class="video"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0"
+      >
+      </iframe>
+      <iframe
+        class="video"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0"
+      >
+      </iframe
+      ><iframe
+        class="video"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0"
+      >
+      </iframe
+      ><iframe
+        class="video"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0"
+      >
+      </iframe>
+    </div>
+  </div>
+</div>
+<div class="blogs">
+  <div class="blogs-head">
+    <div class="title">Blogs</div>
+    <div><button class="more">More</button></div>
+  </div>
+  <div class="blogs-head">
+    <div class="newsCards">
+      <img class="blogImg" src="../../assets/images/silk1.jpg" alt="" />
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla</p>
+      <span class="titleColor">39 sec ago</span>
+    </div>
+    <div class="newsCards">
+      <img class="blogImg" src="../../assets/images/silk2.jpg" alt="" />
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla</p>
+      <span class="titleColor">39 sec ago</span>
+    </div>
+    <div class="newsCards">
+      <img class="blogImg" src="../../assets/images/silk3.jpg" alt="" />
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla</p>
+      <span class="titleColor">39 sec ago</span>
+    </div>
+    <div class="newsCards">
+      <img class="blogImg" src="../../assets/images/silk4.jpg" alt="" />
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nulla</p>
+      <span class="titleColor">39 sec ago</span>
+    </div>
+  </div>
+</div>
+
+<div class="corner">
+  <div><button mat-flat-button color="warn">Utsah Corner</button></div>
+  <div class="corner-content">
+    <div class="colWrapper">
+      <div *ngFor="let item of imageObject" class="section">
+        <div class="image"><img src="{{ item.img }}" alt="" /></div>
+        <div class="about">
+          <div class="about-head">{{ item.head }}</div>
+          <div class="about-subHead">{{ item.subHead }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="colWrapper">
+      <div *ngFor="let item of imageObject" class="section">
+        <div class="image"><img src="{{ item.img }}" alt="" /></div>
+        <div class="about">
+          <div class="about-head">{{ item.head }}</div>
+          <div class="about-subHead">{{ item.subHead }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ads">
+      <img src="assets/images/silk4.jpg" alt="" />
     </div>
   </div>
 </div>
