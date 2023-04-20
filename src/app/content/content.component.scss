@@ -15,10 +15,10 @@
       display: flex;
       justify-content: space-between;
       .topLeft {
-        width: 70%;
+        width: 65%;
       }
       .topRight {
-        width: 25%;
+        width: 32%;
       }
       .midLeft {
         width: 40%;
@@ -30,6 +30,10 @@
   }
   &-right {
     width: 30%;
+    .news {
+      display: flex;
+      margin: 10px 0;
+    }
   }
 }
 .newsBg {
@@ -45,5 +49,6 @@
     color: #fff;
     font-weight: 500;
     bottom: 0;
+    padding: 0 5px;
   }
 }

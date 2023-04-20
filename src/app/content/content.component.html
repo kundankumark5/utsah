@@ -54,25 +54,25 @@
     <div>
       <mat-tab-group>
         <mat-tab label="First">
-          <ul>
-            <li *ngFor="let i of news">
+          <div>
+            <div *ngFor="let i of news" class="news">
               <span><mat-icon>navigate_next</mat-icon></span> {{ i.headline }}
-            </li>
-          </ul>
+            </div>
+          </div>
         </mat-tab>
         <mat-tab label="Second">
-          <ul>
-            <li *ngFor="let i of news">
+          <div>
+            <div *ngFor="let i of news" class="news">
               <span><mat-icon>navigate_next</mat-icon></span> {{ i.headline }}
-            </li>
-          </ul>
+            </div>
+          </div>
         </mat-tab>
         <mat-tab label="Third">
-          <ul>
-            <li *ngFor="let i of news">
+          <div>
+            <div *ngFor="let i of news" class="news">
               <span><mat-icon>navigate_next</mat-icon></span> {{ i.headline }}
-            </li>
-          </ul>
+            </div>
+          </div>
         </mat-tab>
       </mat-tab-group>
     </div>
